@@ -17,7 +17,7 @@ export function GenerateLink(props: GenerateLinkProps) {
                     <label htmlFor="inputLink" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">New Link</label>
                     <a className="flex items-center p-3 text-base font-medium text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
                         <img
-                            src={`https://s2.googleusercontent.com/s2/favicons?domain=${props.origin}&sz=32`}
+                            src={`${import.meta.env.VITE_GOOGLE_API}${props.origin}&sz=32`}
                         ></img>
                         <span className="flex-1 ml-3 whitespace-nowrap">
                             {props.short}

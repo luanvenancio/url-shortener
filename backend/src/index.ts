@@ -1,7 +1,7 @@
 import { URLController } from './controller/URLController';
 import { MongoConnection } from './database/MongoConnection';
 import express from 'express';
-
+const PORT = process.env.PORT;
 const api = express();
 api.use(express.json());
 
@@ -12,4 +12,4 @@ const urlController = new URLController();
 api.post("/api", urlController.shorten);
 api.get("/:hash", urlController.redirect);
 
-api.listen(5000, () => console.log("Express Listening"));
+api.listen(PORT, () => console.log("Express Listening to Port:" + PORT));

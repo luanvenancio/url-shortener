@@ -1,13 +1,13 @@
-import axios from "axios";
-import { useState } from "react";
-import { GenerateLink } from "./GenerateLink";
+import axios from 'axios';
+import { useState } from 'react';
+import { GenerateLink } from './GenerateLink';
 
 const Input = () => {
     const [inputURL, setInputURL] = useState("");
     const [shortLink, setShortLink] = useState("");
     const [originLink, setOriginLink] = useState("");
 
-    const url =  `${process.env.API_URL}/api`;
+    const url = `${import.meta.env.VITE_API_URL}/api`;
 
     async function handleNewURL() {
         try {
