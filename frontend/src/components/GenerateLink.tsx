@@ -1,3 +1,6 @@
+import toast, { Toaster } from "react-hot-toast";
+import React from "react";
+
 type GenerateLinkProps = {
     origin: string;
     short: string;
@@ -6,20 +9,30 @@ type GenerateLinkProps = {
 export function GenerateLink(props: GenerateLinkProps) {
     function copyLinkToClipboard() {
         navigator.clipboard.writeText(props.short);
+
+        toast.success('Copied!');
     }
 
     return (
         <>
+        <Toaster/>
             {typeof props.short === "undefined" || props.short === "" ? (
                 <></>
             ) : (
                 <div className="w-full">
-                    <label htmlFor="inputLink" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">New Link</label>
-                    <a className="flex items-center p-3 text-base font-medium text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <label
+                        htmlFor="inputLink"
+                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >
+                        New Link
+                    </label>
+                    <a className="flex items-center justify-around p-3 text-base font-medium text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
                         <img
-                            src={`${import.meta.env.VITE_GOOGLE_API}${props.origin}&sz=32`}
+                            src={`${import.meta.env.VITE_GOOGLE_API}${
+                                props.origin
+                            }&sz=32`}
                         ></img>
-                        <span className="flex-1 ml-3 whitespace-nowrap">
+                        <span className="w-fit whitespace-wrap">
                             {props.short}
                         </span>
                         <button
@@ -45,7 +58,6 @@ export function GenerateLink(props: GenerateLinkProps) {
                     </a>
                 </div>
             )}
-
         </>
     );
 }

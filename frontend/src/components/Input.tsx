@@ -1,6 +1,7 @@
 import axios from 'axios';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { GenerateLink } from './GenerateLink';
+
 
 const Input = () => {
     const [inputURL, setInputURL] = useState("");
@@ -20,7 +21,7 @@ const Input = () => {
                     setShortLink(res.data.shortURL);
                 })
                 .catch((err) => {
-                    console.error("ops! ocorreu um erro" + err);
+                    console.log("ops! ocorreu um erro" + err);
                 });
         } catch (err) {
             console.log(err);

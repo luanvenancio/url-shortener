@@ -24,6 +24,7 @@
     "nodemon": "^2.0.16",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-hot-toast": "^2.3.0",
     "shortid": "^2.2.16"
   },
   "devDependencies": {
