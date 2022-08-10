@@ -6,11 +6,12 @@ O desafio de Código realizado no bootcamp Digital Innovation One, consiste em c
 ## Objetivos
 
 ### Principal
-- [x] Criar backend do encurtador de links
+- [x] Criar backend do encurtador de links;
 - [x] Gerar novo link; 
 - [x] Gerenciar Rotas com Express;
 - [x] Conectar com MongoDB.
 
 ### Adicional
-- [x] Criar frontend
-- [x] Adicionar estilização com FlowBite
+- [x] Criar frontend;
+- [x] Adicionar notificação quando a URL gerada for copiada;
+- [x] Adicionar estilização com FlowBite + Tailwind.
