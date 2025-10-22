@@ -21,7 +21,7 @@
     "flowbite": "^1.4.7",
     "flowbite-react": "^0.0.25",
     "mongoose": "^6.13.6",
-    "nodemon": "^2.0.16",
+    "nodemon": "^2.0.19",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-hot-toast": "^2.3.0",
